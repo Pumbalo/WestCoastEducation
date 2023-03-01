@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "8HHPWgqrB5aLICcxZQWL9Cl6522EVRxinRCbvwraroo=",
+  "Source": "westcoast-education.web",
+  "BasePath": "_content/westcoast-education.web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "westcoast-education.web\\wwwroot",
+      "Source": "westcoast-education.web",
+      "ContentRoot": "C:\\Users\\simon\\Desktop\\skola\\Westcoast Education\\WestCoastEducation\\westcoast-education.web\\wwwroot\\",
+      "BasePath": "_content/westcoast-education.web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\simon\\Desktop\\skola\\Westcoast Education\\WestCoastEducation\\westcoast-education.web\\wwwroot\\css\\style.css",
+      "SourceId": "westcoast-education.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\simon\\Desktop\\skola\\Westcoast Education\\WestCoastEducation\\westcoast-education.web\\wwwroot\\",
+      "BasePath": "_content/westcoast-education.web",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\simon\\Desktop\\skola\\Westcoast Education\\WestCoastEducation\\westcoast-education.web\\wwwroot\\favicon.ico",
+      "SourceId": "westcoast-education.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\simon\\Desktop\\skola\\Westcoast Education\\WestCoastEducation\\westcoast-education.web\\wwwroot\\",
+      "BasePath": "_content/westcoast-education.web",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

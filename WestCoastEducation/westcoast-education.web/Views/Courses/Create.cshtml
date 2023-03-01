@@ -1,0 +1,43 @@
+@model westcoast_education.web.ViewModels.CoursePostViewModel
+
+@{
+    ViewData["Title"] = "Create new Course";
+}
+
+
+<section class="wrapper">
+    <h1 class="title">Add a new course</h1>
+    <form asp-action="create" asp-controller="Courses" method="post">
+        <div>
+            <label asp-for="CourseName">Course Name</label>
+            <input asp-for="CourseName">
+            <span asp-validation-for="CourseName"></span>
+        </div>
+        <div>
+            <label asp-for="CourseTitle">Course Title</label>
+            <input asp-for="CourseTitle">
+            <span asp-validation-for="CourseTitle"></span>
+        </div>
+        <div>
+            <label asp-for="StartDate">Start Date</label>
+            <input asp-for="StartDate">
+            <span asp-validation-for="StartDate"></span>
+        </div>
+        <div>
+            <label asp-for="CourseLength">Course Length</label>
+            <input asp-for="CourseLength">
+            <span asp-validation-for="CourseLength"></span>
+        </div>
+        <div>
+            <label asp-for="OnSite">On Site</label>
+            <input asp-for="OnSite">
+            <span asp-validation-for="OnSite"></span>
+        </div>
+        <div>
+            <label asp-for="CoursePoints">Course Points</label>
+            <input asp-for="CoursePoints">
+            <span asp-validation-for="CoursePoints"></span>
+        </div>
+        <button type="Submit">Spara</button>
+    </form>
+</section>

@@ -1,0 +1,47 @@
+[
+  {
+    "courseId": "c2537818-68bf-4a4c-ae09-f30b36499a75",
+    "courseName": "Language Basics",
+    "courseTitle": "English 6",
+    "startDate": "24 February, 2023",
+    "courseLength": "2 years",
+    "onSite": true,
+    "coursePoints": 2500
+  },
+  {
+    "courseId": "54fc91cf-8b21-41ab-bb48-f675a1ad91e2",
+    "courseName": "Language Basics",
+    "courseTitle": "English 7",
+    "startDate": "24 February, 2025",
+    "courseLength": "2 years",
+    "onSite": true,
+    "coursePoints": 3000
+  },
+  {
+    "courseId": "9a5a4407-b582-4c0e-bb46-c6f2a1bb766a",
+    "courseName": "Programming Basics",
+    "courseTitle": "Web Development 1",
+    "startDate": "24 March, 2023",
+    "courseLength": "1 year",
+    "onSite": true,
+    "coursePoints": 1500
+  },
+  {
+    "courseId": "9ce1fbc5-8044-453a-8033-97b37583a8da",
+    "courseName": "Programming Basics",
+    "courseTitle": "C# 1",
+    "startDate": "10 January, 2023",
+    "courseLength": "3 years",
+    "onSite": true,
+    "coursePoints": 2000
+  },
+  {
+    "courseId": "1ca22022-693f-4070-b009-ea1a1063d016",
+    "courseName": "Programming Advanced",
+    "courseTitle": "Web Development 2",
+    "startDate": "24 May, 2025",
+    "courseLength": "2 years",
+    "onSite": true,
+    "coursePoints": 2500
+  }
+]

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Westcoast Education</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://kit.fontawesome.com/a6ee46a058.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="navbar">
+                <h1 class="logo">Westcoast Education</h1>
+                <ul>
+                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li><a asp-action="Index" asp-controller="Courses">Courses</a></li>
+                    <li><a asp-action="Index" asp-controller="Students">Students</a></li>
+                    <li><a asp-action="Index" asp-controller="Teachers">Teachers</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <h1 class="title-home">Welcome to Westcoast Education</h1>
+            <h4 class="title-home">What are you waiting for, start your studies!</h4>
+        </div>
+        @RenderBody()
+    </main>
+</body>
+
+</html>

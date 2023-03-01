@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>westcoast-education.api</name>
+    </assembly>
+    <members>
+        <member name="M:westcoast_education.api.Controllers.CourseController.ListAll">
+            <summary>
+            Listar alla kurser i systemet
+            </summary>
+        </member>
+        <member name="M:westcoast_education.api.Controllers.CourseController.GetById(System.Guid)">
+            <summary>
+            Hämtar en kurs baserad på kurs id
+            </summary>
+            <param name="id"></param>
+            <returns>
+            Kurs information om sökt kurs och dess lärare samt studenter
+            </returns>
+            <response code="200">Returnerar en kurs med information om sökt kurs och dess lärare samt studenter</response>
+        </member>
+        <member name="M:westcoast_education.api.Controllers.CourseController.Add(westcoast_education.api.ViewModels.CoursePostViewModel)">
+             <summary>
+             Skapar och lägger till en ny kurs i systemet
+             </summary>
+             <param name="model"></param>
+             <returns>En länk till den nya kursen och ett object med kursens information</returns>
+             <remarks>
+             Sample Request:
+            
+             POST /api/v1/courses
+             {
+                 "title": "Kurstitle",
+                 "courseNumber": 12345,
+                 "duration": 5,
+                 "startDate": "2023-09-11"
+             }
+             </remarks>
+             <response code="201">Returnerar den tillagda kursen</response>
+             <response code="400">Om kursen redan existerar eller om det saknas information i anropet</response>
+        </member>
+        <member name="M:westcoast_education.api.Controllers.CourseController.AddStudent(System.Guid,System.Guid)">
+            <summary>
+            Lägger tille n ny student till en befintlig kurs.
+            </summary>
+            <param name="courseId"></param>
+            <param name="studentId"></param>
+            <returns>Inget</returns>
+            <response code="204"></response>
+            <response code="404">Om kurs eller student inte finns i systemet</response>
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.RelationToCourseAndStudent">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.RelationToCourseAndStudent.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.RelationToCourseAndStudent.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.RelationToCourseAndStudent.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.RelationToCourseAndTeacher">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.RelationToCourseAndTeacher.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.RelationToCourseAndTeacher.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.RelationToCourseAndTeacher.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.AddedCompetence">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.AddedCompetence.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.AddedCompetence.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.AddedCompetence.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.ManyStudentToManyCourses">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.ManyStudentToManyCourses.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.ManyStudentToManyCourses.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.ManyStudentToManyCourses.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.FixedTypos">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.FixedTypos.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.FixedTypos.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.FixedTypos.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:westcoasteducation.api.Data.Migrations.FixedTyposWithinStudentCourses">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.FixedTyposWithinStudentCourses.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.FixedTyposWithinStudentCourses.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:westcoasteducation.api.Data.Migrations.FixedTyposWithinStudentCourses.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

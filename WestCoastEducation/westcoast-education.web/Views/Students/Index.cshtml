@@ -1,0 +1,42 @@
+﻿@model IList<westcoast_education.web.ViewModels.StudentListViewModel>
+
+@{
+    ViewData["Title"] = "Students";
+}
+<div>
+    <div class="wrapper">
+        <h1 class="title">WestCoast Educations Students</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phonenumber</th>
+                    <th>Adress</th>
+                    <th>Zip Code</th>
+                    <th>City</th>
+                    <th>Profile Avatar</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.studentId</td>
+                        <td>@student.FirstName @student.LastName</td>
+                        <td>@student.Email</td>
+                        <td>@student.PhoneNumber</td>
+                        <td>@student.Adress</td>
+                        <td>@student.ZipCode</td>
+                        <td>@student.City</td>
+                        <td><img src="@student.ProfileAvatar" /></td>
+                        <td><a asp-action="details" asp-controller="Students" asp-route-StudentId=@student.studentId>Details</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

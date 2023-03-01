@@ -1,0 +1,110 @@
+@model westcoast_education.web.ViewModels.Course.CourseDetailsViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Id</th>
+                    <th>Course Name</th>
+                    <th>Course Title</th>
+                    <th>Start Date</th>
+                    <th>Course Length</th>
+                    <th>On Site</th>
+                    <th>Course Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.courseId</td>
+                    <td>@Model.CourseName</td>
+                    <td>@Model.CourseTitle</td>
+                    <td>@Model.StartDate</td>
+                    <td>@Model.CourseLength</td>
+                    <td>@Model.OnSite</td>
+                    <td>@Model.CoursePoints</td>
+                </tr>
+            </tbody>
+        </table>
+        @if (Model.Students != null && Model.Students.Any())
+        {
+            <h2 class="title">Students:</h2>
+            <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Phonenumber</th>
+                    <th>Adress</th>
+                    <th>Zip Code</th>
+                    <th>City</th>
+                    <th>Profile Avatar</th>
+                </tr>
+            </thead>
+            @foreach (var student in Model.Students!)
+            {
+            <tbody>
+                <tr>
+                    <td>@student.studentId</td>
+                    <td>@student.FirstName @student.LastName</td>
+                    <td>@student.Email</td>
+                    <td>@student.PhoneNumber</td>
+                    <td>@student.Adress</td>
+                    <td>@student.ZipCode</td>
+                    <td>@student.City</td>
+                    <td><img src="@student.ProfileAvatar" />
+                    </td>
+                </tr>
+            </tbody>
+            }
+        </table>
+        }
+        else
+        {
+            <h2 class="title">There are currently no students enrolled in this course</h2>
+        }
+
+        @if (Model.Teachers != null)
+        {
+            <h2 class="title">Teacher:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teacher ID</th>
+                        <th>Teacher Name</th>
+                        <th>Email</th>
+                        <th>Phonenumber</th>
+                        <th>Adress</th>
+                        <th>Zip Code</th>
+                        <th>City</th>
+                        <th>Profile Avatar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>@Model.Teachers.teacherId</td>
+                            <td>@Model.Teachers.FirstName @Model.Teachers.LastName</td>
+                            <td>@Model.Teachers.Email</td>
+                            <td>@Model.Teachers.PhoneNumber</td>
+                            <td>@Model.Teachers.Adress</td>
+                            <td>@Model.Teachers.ZipCode</td>
+                            <td>@Model.Teachers.City</td>
+                            <td><img src="@Model.Teachers.ProfileAvatar" /></td>
+                        </tr>
+                    </tbody>
+            </table>
+        }
+        else
+        {
+            <h2>There is no teacher assigned to this course</h2>
+        }
+
+
+    </div>
+</div>

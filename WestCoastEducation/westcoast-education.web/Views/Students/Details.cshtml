@@ -1,0 +1,77 @@
+@model westcoast_education.web.ViewModels.Student.StudentDetailsViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Phonenumber</th>
+                    <th>Adress</th>
+                    <th>Zip Code</th>
+                    <th>City</th>
+                    <th>Profile Avatar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.studentId</td>
+                    <td>@Model.FirstName @Model.LastName</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.PhoneNumber</td>
+                    <td>@Model.Adress</td>
+                    <td>@Model.ZipCode</td>
+                    <td>@Model.City</td>
+                    <td><img src="@Model.ProfileAvatar"/></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        @if (Model.Courses?.Count > 0)
+        {
+            <h2 class="title">Courses:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Id</th>
+                        <th>Course Name</th>
+                        <th>Course Title</th>
+                        <th>Start Date</th>
+                        <th>Course Length</th>
+                        <th>OnSite</th>
+                        <th>Course Points</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                @foreach (var course in Model.Courses)
+                {
+                <tbody>
+                    <tr>
+                        <td>@course.CourseId</td>
+                        <td>@course.CourseName</td>
+                        <td>@course.CourseTitle</td>
+                        <td>@course.StartDate</td>
+                        <td>@course.CourseLength</td>
+                        <td>@(course.OnSite ? "Yes" : "No")</td>
+                        <td>@course.CoursePoints</td>
+                        <td>@course.Status</td>
+                    </tr>
+                </tbody>
+                }
+            </table>
+        }
+        else
+        {
+            <h2 class="title">@Model.FirstName is not currently taking any courses.</h2>
+        }
+
+    </div>
+</div>

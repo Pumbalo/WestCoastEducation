@@ -1,0 +1,45 @@
+﻿@model IList<westcoast_education.web.ViewModels.CourseListViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="wrapper">
+        <a class="admin-add" asp-action="create" asp-controller="Courses">Add course</a>
+        <h1 class="title">WestCoast Educations Kurser</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Id</th>
+                    <th>Course Name</th>
+                    <th>Course Title</th>
+                    <th>Start Date</th>
+                    <th>Course Length</th>
+                    <th>On Site</th>
+                    <th>Course Points</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>View Detailed</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in Model)
+                {
+                    <tr>
+                        <td>@course.CourseId</td>
+                        <td>@course.CourseName</td>
+                        <td>@course.CourseTitle</td>
+                        <td>@course.StartDate</td>
+                        <td>@course.CourseLength</td>
+                        <td>@course.OnSite</td>
+                        <td>@course.CoursePoints</td>
+                        <td><a asp-action="edit" asp-controller="Courses" asp-route-CourseId=@course.CourseId>Edit</a></td>
+                        <td><a asp-action="delete" asp-controller="Courses" asp-route-CourseId=@course.CourseId>Delete</a></td>
+                        <td><a asp-action="details" asp-controller="Courses" asp-route-CourseId=@course.CourseId>Details</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
